@@ -1,0 +1,8 @@
+{
+  "status": "ok",
+  "pipeline": "failed",
+  "detail": "No events after normalization",
+  "data_mode": "official",
+  "events": 0,
+  "alerts": 0
+}

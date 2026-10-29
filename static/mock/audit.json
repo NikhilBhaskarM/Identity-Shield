@@ -1,0 +1,425 @@
+[
+  {
+    "seq": 47,
+    "timestamp": "2026-10-28T23:23:26.370928Z",
+    "agent": "notifier",
+    "action": "email_rate_limited",
+    "detail": "test: [IdentityShield] Test email -> admin@corp.example",
+    "prev_hash": "37e9152e2154a826dfcc448908344ae1c55f0b376fcbfc71fef285527a37b319",
+    "hash": "acdecea77ffbdb26e9a910b664b8076d0f5f338f8d65eb56b733f82e07400c4f"
+  },
+  {
+    "seq": 46,
+    "timestamp": "2026-10-28T23:23:26.355929Z",
+    "agent": "notifier",
+    "action": "email_outbox",
+    "detail": "test: [IdentityShield] Test email -> admin@corp.example",
+    "prev_hash": "17561a2038b5978ae49d09e10632ffc60cd8326cf18935654a9378786467e5c1",
+    "hash": "37e9152e2154a826dfcc448908344ae1c55f0b376fcbfc71fef285527a37b319"
+  },
+  {
+    "seq": 45,
+    "timestamp": "2026-10-28T23:23:26.329456Z",
+    "agent": "notifier",
+    "action": "email_failed",
+    "detail": "test: [IdentityShield] Test email -> admin@corp.example",
+    "prev_hash": "a82300bd80ee5738f7792a79498e444e3bde1f3c3753f82ff2e79c141012e5eb",
+    "hash": "17561a2038b5978ae49d09e10632ffc60cd8326cf18935654a9378786467e5c1"
+  },
+  {
+    "seq": 44,
+    "timestamp": "2026-10-28T23:23:24.255003Z",
+    "agent": "notifier",
+    "action": "email_outbox",
+    "detail": "digest: [IdentityShield] CRITICAL: 2 identities need attention - svc (risk 94) -> admin@corp.example",
+    "prev_hash": "cd8ddc90734ca397b500aef6a6a7053d38d911e54c73dde06baba0a066c7f546",
+    "hash": "a82300bd80ee5738f7792a79498e444e3bde1f3c3753f82ff2e79c141012e5eb"
+  },
+  {
+    "seq": 43,
+    "timestamp": "2026-10-28T23:23:24.087142Z",
+    "agent": "threat_detection",
+    "action": "threat_detected",
+    "detail": "{\"alert_id\": \"AL-4aa49f\", \"band\": \"revoke\", \"detectors\": [\"dormant\", \"priv_escalation\"], \"evidence_count\": 2, \"evidence_sample\": [\"e1\", \"e2\"], \"fingerprint\": \"cli-6de2e1|s-cli-6de2e1|revoke\", \"identity_id\": \"cli-6de2e1\", \"mitre\": [\"T1098\"], \"patterns\": [\"P3\", \"P2\"], \"reason\": \"chain found\", \"recommended_action\": \"revoke\", \"risk\": 94.0, \"run_id\": \"scan-20261028-232324-8dd5\", \"session_id\": \"s-cli-6de2e1\"}",
+    "prev_hash": "6730518871670dc8d4e8049dd84b25772fdd91acd27d13b8ef1f3d74149919e5",
+    "hash": "cd8ddc90734ca397b500aef6a6a7053d38d911e54c73dde06baba0a066c7f546"
+  },
+  {
+    "seq": 42,
+    "timestamp": "2026-10-28T23:23:24.052852Z",
+    "agent": "threat_detection",
+    "action": "threat_detected",
+    "detail": "{\"alert_id\": \"AL-0e9909\", \"band\": \"revoke\", \"detectors\": [\"dormant\", \"priv_escalation\"], \"evidence_count\": 2, \"evidence_sample\": [\"e1\", \"e2\"], \"fingerprint\": \"run-dd0530|s-run-dd0530|revoke\", \"identity_id\": \"run-dd0530\", \"mitre\": [\"T1098\"], \"patterns\": [\"P3\", \"P2\"], \"reason\": \"chain found\", \"recommended_action\": \"revoke\", \"risk\": 94.0, \"run_id\": \"scan-20261028-232324-5859\", \"session_id\": \"s-run-dd0530\"}",
+    "prev_hash": "79d346124c012e7db09b549d8e67e98d8af91f4c112f388c247f16a4be77abee",
+    "hash": "6730518871670dc8d4e8049dd84b25772fdd91acd27d13b8ef1f3d74149919e5"
+  },
+  {
+    "seq": 41,
+    "timestamp": "2026-10-28T23:23:24.044806Z",
+    "agent": "threat_detection",
+    "action": "threat_detected",
+    "detail": "{\"alert_id\": \"AL-cc6732\", \"band\": \"revoke\", \"detectors\": [\"dormant\", \"priv_escalation\"], \"evidence_count\": 2, \"evidence_sample\": [\"e1\", \"e2\"], \"fingerprint\": \"r-9657e2|s-r-9657e2|revoke\", \"identity_id\": \"r-9657e2\", \"mitre\": [\"T1098\"], \"patterns\": [\"P3\", \"P2\"], \"reason\": \"chain found\", \"recommended_action\": \"revoke\", \"risk\": 94.0, \"run_id\": \"scan-20261028-232324-52a9\", \"session_id\": \"s-r-9657e2\"}",
+    "prev_hash": "c2bf648953ca3bd2beb2f33eb95baf62a7b02fb81bb3d04d8ee3ccc95b3b03e4",
+    "hash": "79d346124c012e7db09b549d8e67e98d8af91f4c112f388c247f16a4be77abee"
+  },
+  {
+    "seq": 40,
+    "timestamp": "2026-10-28T23:23:24.036097Z",
+    "agent": "threat_detection",
+    "action": "threat_detected",
+    "detail": "{\"alert_id\": \"AL-ea393a\", \"band\": \"revoke\", \"detectors\": [\"impossible_travel\"], \"evidence_count\": 2, \"evidence_sample\": [\"e1\", \"e2\"], \"fingerprint\": \"user-e8998bb|s-user-e8998bb|revoke\", \"identity_id\": \"user-e8998bb\", \"mitre\": [\"T1098\"], \"patterns\": [\"P1\"], \"reason\": \"chain found\", \"recommended_action\": \"revoke\", \"risk\": 95.0, \"run_id\": \"scan-20261028-232324-9c91\", \"session_id\": \"s-user-e8998bb\"}",
+    "prev_hash": "3cb4db05327f99c4ac0a81ecc9e38f7635cc19a2e26ce0daf2c53f2507cc452a",
+    "hash": "c2bf648953ca3bd2beb2f33eb95baf62a7b02fb81bb3d04d8ee3ccc95b3b03e4"
+  },
+  {
+    "seq": 39,
+    "timestamp": "2026-10-28T23:23:24.029331Z",
+    "agent": "threat_detection",
+    "action": "threat_detected",
+    "detail": "{\"alert_id\": \"AL-6fa1e2\", \"band\": \"restrict\", \"detectors\": [\"impossible_travel\"], \"evidence_count\": 2, \"evidence_sample\": [\"e1\", \"e2\"], \"fingerprint\": \"user-e8998bb|s-user-e8998bb|restrict\", \"identity_id\": \"user-e8998bb\", \"mitre\": [\"T1098\"], \"patterns\": [\"P1\"], \"reason\": \"chain found\", \"recommended_action\": \"restrict\", \"risk\": 72.0, \"run_id\": \"scan-20261028-232324-9c91\", \"session_id\": \"s-user-e8998bb\"}",
+    "prev_hash": "5b81daf339eaeae57271ea389272480906de88ece0190999121c3b9959f0a25e",
+    "hash": "3cb4db05327f99c4ac0a81ecc9e38f7635cc19a2e26ce0daf2c53f2507cc452a"
+  },
+  {
+    "seq": 38,
+    "timestamp": "2026-10-28T23:23:24.022872Z",
+    "agent": "threat_detection",
+    "action": "threat_detected",
+    "detail": "{\"alert_id\": \"AL-70ca9f\", \"band\": \"revoke\", \"detectors\": [\"dormant\", \"priv_escalation\"], \"evidence_count\": 2, \"evidence_sample\": [\"e1\", \"e2\"], \"fingerprint\": \"user-e8998b|s-user-e8998b|revoke\", \"identity_id\": \"user-e8998b\", \"mitre\": [\"T1098\"], \"patterns\": [\"P3\", \"P2\"], \"reason\": \"chain found\", \"recommended_action\": \"revoke\", \"risk\": 94.0, \"run_id\": \"scan-20261028-232324-9c91\", \"session_id\": \"s-user-e8998b\"}",
+    "prev_hash": "354d627db762d19309c3c9908737487bafc822c5838cecdd19359415c4e57e01",
+    "hash": "5b81daf339eaeae57271ea389272480906de88ece0190999121c3b9959f0a25e"
+  },
+  {
+    "seq": 37,
+    "timestamp": "2026-10-28T23:23:23.867235Z",
+    "agent": "feedback",
+    "action": "feedback_tp",
+    "detail": "Alert AL-FB-TEST labeled tp",
+    "prev_hash": "5942e37cc5cf86d8dc3d69e2ecf888b0472daf804415d277dd570189cc55f697",
+    "hash": "354d627db762d19309c3c9908737487bafc822c5838cecdd19359415c4e57e01"
+  },
+  {
+    "seq": 36,
+    "timestamp": "2026-10-28T23:23:23.846885Z",
+    "agent": "response",
+    "action": "action_revoke",
+    "detail": "u-revoke (AL-REVOKE-TEST): applied - simulated:revoke:ok",
+    "prev_hash": "4a8636534009ef6e861a0f6644195cfd928e11a3b9d6517d2e1cdc353b01eee9",
+    "hash": "5942e37cc5cf86d8dc3d69e2ecf888b0472daf804415d277dd570189cc55f697"
+  },
+  {
+    "seq": 35,
+    "timestamp": "2026-10-28T23:23:23.414481Z",
+    "agent": "test",
+    "action": "check",
+    "detail": "ok",
+    "prev_hash": "c3b8f75ee4d4e6f6b90d5f1f0ef0369dee19c8d1c0e6a41ca2ca5d4cd119fb67",
+    "hash": "4a8636534009ef6e861a0f6644195cfd928e11a3b9d6517d2e1cdc353b01eee9"
+  },
+  {
+    "seq": 34,
+    "timestamp": "2026-10-28T23:13:31.862295Z",
+    "agent": "orchestrator",
+    "action": "pipeline_end",
+    "detail": "Alerts: 27, Errors: 0",
+    "prev_hash": "377296398d5c9b3c4c20f6f1cd8d51297e996235d4bbb586f6ff52fa22273641",
+    "hash": "c3b8f75ee4d4e6f6b90d5f1f0ef0369dee19c8d1c0e6a41ca2ca5d4cd119fb67"
+  },
+  {
+    "seq": 33,
+    "timestamp": "2026-10-28T23:13:31.653466Z",
+    "agent": "response",
+    "action": "action_monitor",
+    "detail": "priya.patel (AL-0027): applied - Continuous monitoring active",
+    "prev_hash": "f750e96324b39ca4a224573b5d802968cf098e9da3f0594ecd33f9905bea0cd5",
+    "hash": "377296398d5c9b3c4c20f6f1cd8d51297e996235d4bbb586f6ff52fa22273641"
+  },
+  {
+    "seq": 32,
+    "timestamp": "2026-10-28T23:13:31.638036Z",
+    "agent": "response",
+    "action": "action_monitor",
+    "detail": "suresh.menon (AL-0026): applied - Continuous monitoring active",
+    "prev_hash": "660db1d8e213a632d875f4e4f5c52cac94badb3e689b9d61891cae77a1075883",
+    "hash": "f750e96324b39ca4a224573b5d802968cf098e9da3f0594ecd33f9905bea0cd5"
+  },
+  {
+    "seq": 31,
+    "timestamp": "2026-10-28T23:13:31.624032Z",
+    "agent": "response",
+    "action": "action_monitor",
+    "detail": "rahul.verma (AL-0025): applied - Continuous monitoring active",
+    "prev_hash": "04ef5238489c3bffd048962adeba3f512824bc23088a182fa186e533ad7f6265",
+    "hash": "660db1d8e213a632d875f4e4f5c52cac94badb3e689b9d61891cae77a1075883"
+  },
+  {
+    "seq": 30,
+    "timestamp": "2026-10-28T23:13:31.608989Z",
+    "agent": "response",
+    "action": "action_monitor",
+    "detail": "anita.rao (AL-0024): applied - Continuous monitoring active",
+    "prev_hash": "57b6705e70311de533b6c91d8d7c06f91bf0744275f5eb2bd9145847714b5a02",
+    "hash": "04ef5238489c3bffd048962adeba3f512824bc23088a182fa186e533ad7f6265"
+  },
+  {
+    "seq": 29,
+    "timestamp": "2026-10-28T23:13:31.593466Z",
+    "agent": "response",
+    "action": "action_monitor",
+    "detail": "meera.n (AL-0023): applied - Continuous monitoring active",
+    "prev_hash": "fe1cd320c067d9e79b5de1d9e4df1bf2111adf953c575789615daa3d55f09b7d",
+    "hash": "57b6705e70311de533b6c91d8d7c06f91bf0744275f5eb2bd9145847714b5a02"
+  },
+  {
+    "seq": 28,
+    "timestamp": "2026-10-28T23:13:31.578412Z",
+    "agent": "response",
+    "action": "action_monitor",
+    "detail": "anita.rao (AL-0022): applied - Continuous monitoring active",
+    "prev_hash": "649b15c7b49e0f0bf0ac52e218e12ea1c070547a7e72a64ae99589cdb4c5cacd",
+    "hash": "fe1cd320c067d9e79b5de1d9e4df1bf2111adf953c575789615daa3d55f09b7d"
+  },
+  {
+    "seq": 27,
+    "timestamp": "2026-10-28T23:13:31.562407Z",
+    "agent": "response",
+    "action": "action_monitor",
+    "detail": "anita.rao (AL-0021): applied - Continuous monitoring active",
+    "prev_hash": "1a8d7fd7ce50e99d9fef2a37fa7840f785b6f104d522735c8deab87a3148b11f",
+    "hash": "649b15c7b49e0f0bf0ac52e218e12ea1c070547a7e72a64ae99589cdb4c5cacd"
+  },
+  {
+    "seq": 26,
+    "timestamp": "2026-10-28T23:13:31.546817Z",
+    "agent": "response",
+    "action": "action_monitor",
+    "detail": "anita.rao (AL-0020): applied - Continuous monitoring active",
+    "prev_hash": "649105c9c972e45fbf5b34900312a04722cee76296f0494a6d3fb6bd98680838",
+    "hash": "1a8d7fd7ce50e99d9fef2a37fa7840f785b6f104d522735c8deab87a3148b11f"
+  },
+  {
+    "seq": 25,
+    "timestamp": "2026-10-28T23:13:31.531704Z",
+    "agent": "response",
+    "action": "action_monitor",
+    "detail": "dev.kumar (AL-0019): applied - Continuous monitoring active",
+    "prev_hash": "f7d6d688030f2eaef6bb58249b2fbe5d58d281f450e2d5245ec4a4aecd4a3878",
+    "hash": "649105c9c972e45fbf5b34900312a04722cee76296f0494a6d3fb6bd98680838"
+  },
+  {
+    "seq": 24,
+    "timestamp": "2026-10-28T23:13:31.516662Z",
+    "agent": "response",
+    "action": "action_monitor",
+    "detail": "dev.kumar (AL-0018): applied - Continuous monitoring active",
+    "prev_hash": "9019d690a8a5f14ed8f2174ca2dc794dd4937fd046345190ad232115f67a1901",
+    "hash": "f7d6d688030f2eaef6bb58249b2fbe5d58d281f450e2d5245ec4a4aecd4a3878"
+  },
+  {
+    "seq": 23,
+    "timestamp": "2026-10-28T23:13:31.500942Z",
+    "agent": "response",
+    "action": "action_monitor",
+    "detail": "anita.rao (AL-0017): applied - Continuous monitoring active",
+    "prev_hash": "abd232914354aeac573dcacdca6a5b99c4d97aeb9404eb1b71cfbcf995aea099",
+    "hash": "9019d690a8a5f14ed8f2174ca2dc794dd4937fd046345190ad232115f67a1901"
+  },
+  {
+    "seq": 22,
+    "timestamp": "2026-10-28T23:13:31.485946Z",
+    "agent": "response",
+    "action": "action_monitor",
+    "detail": "dev.kumar (AL-0016): applied - Continuous monitoring active",
+    "prev_hash": "2339dfa1ab8bfb03914103c66aeb7ce27fddcda90a1435a7ca00996401b0da1d",
+    "hash": "abd232914354aeac573dcacdca6a5b99c4d97aeb9404eb1b71cfbcf995aea099"
+  },
+  {
+    "seq": 21,
+    "timestamp": "2026-10-28T23:13:31.471374Z",
+    "agent": "response",
+    "action": "action_monitor",
+    "detail": "dev.kumar (AL-0015): applied - Continuous monitoring active",
+    "prev_hash": "0e22a57fdf28e84fc2ad21235247c8fe1decc7585c2e6599e75ca8808367080a",
+    "hash": "2339dfa1ab8bfb03914103c66aeb7ce27fddcda90a1435a7ca00996401b0da1d"
+  },
+  {
+    "seq": 20,
+    "timestamp": "2026-10-28T23:13:31.455712Z",
+    "agent": "response",
+    "action": "action_monitor",
+    "detail": "dev.kumar (AL-0014): applied - Continuous monitoring active",
+    "prev_hash": "43c660d52f7235200720a9b4dbab5be88a87c1552cf3761065229022e55f16a4",
+    "hash": "0e22a57fdf28e84fc2ad21235247c8fe1decc7585c2e6599e75ca8808367080a"
+  },
+  {
+    "seq": 19,
+    "timestamp": "2026-10-28T23:13:31.440855Z",
+    "agent": "response",
+    "action": "action_monitor",
+    "detail": "dev.kumar (AL-0013): applied - Continuous monitoring active",
+    "prev_hash": "90ee16dee3318e0a386c159fdadd908c7f0e83200d0662083a11d746c38f60ba",
+    "hash": "43c660d52f7235200720a9b4dbab5be88a87c1552cf3761065229022e55f16a4"
+  },
+  {
+    "seq": 18,
+    "timestamp": "2026-10-28T23:13:31.425857Z",
+    "agent": "response",
+    "action": "action_monitor",
+    "detail": "dev.kumar (AL-0012): applied - Continuous monitoring active",
+    "prev_hash": "ff5f18f29329271837bb30b6bef1bf3f900462a4da63280e1d2190cc5d10e883",
+    "hash": "90ee16dee3318e0a386c159fdadd908c7f0e83200d0662083a11d746c38f60ba"
+  },
+  {
+    "seq": 17,
+    "timestamp": "2026-10-28T23:13:31.410824Z",
+    "agent": "response",
+    "action": "action_monitor",
+    "detail": "dev.kumar (AL-0011): applied - Continuous monitoring active",
+    "prev_hash": "77b141cb1a1212694d5a6a38c4af62f8089f30d66d9541525dcea7f7994d84d3",
+    "hash": "ff5f18f29329271837bb30b6bef1bf3f900462a4da63280e1d2190cc5d10e883"
+  },
+  {
+    "seq": 16,
+    "timestamp": "2026-10-28T23:13:31.395808Z",
+    "agent": "response",
+    "action": "action_monitor",
+    "detail": "svc-report (AL-0010): applied - Continuous monitoring active",
+    "prev_hash": "a8fcb14ea552ddcada44f4da8fbd92d19e64f20e1859c77298301c88768e2a58",
+    "hash": "77b141cb1a1212694d5a6a38c4af62f8089f30d66d9541525dcea7f7994d84d3"
+  },
+  {
+    "seq": 15,
+    "timestamp": "2026-10-28T23:13:31.380853Z",
+    "agent": "response",
+    "action": "action_monitor",
+    "detail": "svc-report (AL-0009): applied - Continuous monitoring active",
+    "prev_hash": "be54a240cd152c0799c86d675b8fae36879a345b2d0365a0c7217d50d16dd866",
+    "hash": "a8fcb14ea552ddcada44f4da8fbd92d19e64f20e1859c77298301c88768e2a58"
+  },
+  {
+    "seq": 14,
+    "timestamp": "2026-10-28T23:13:31.365853Z",
+    "agent": "response",
+    "action": "action_monitor",
+    "detail": "anita.rao (AL-0008): applied - Continuous monitoring active",
+    "prev_hash": "af3e601a96bbedfbcafa65c991e5b83976d15a33174103ef731e7782a380c0d0",
+    "hash": "be54a240cd152c0799c86d675b8fae36879a345b2d0365a0c7217d50d16dd866"
+  },
+  {
+    "seq": 13,
+    "timestamp": "2026-10-28T23:13:31.350852Z",
+    "agent": "response",
+    "action": "action_monitor",
+    "detail": "svc-report (AL-0007): applied - Continuous monitoring active",
+    "prev_hash": "ca880cf5a98bd580548b5f70a05e422d3a2d8bd6922b9c2c23dcff5f26ea4a2a",
+    "hash": "af3e601a96bbedfbcafa65c991e5b83976d15a33174103ef731e7782a380c0d0"
+  },
+  {
+    "seq": 12,
+    "timestamp": "2026-10-28T23:13:31.335328Z",
+    "agent": "response",
+    "action": "action_monitor",
+    "detail": "anita.rao (AL-0006): applied - Continuous monitoring active",
+    "prev_hash": "efca5450e2a2fe9bc281ba021a2560d136cd1c39d267ed127da6dfba541dfc1b",
+    "hash": "ca880cf5a98bd580548b5f70a05e422d3a2d8bd6922b9c2c23dcff5f26ea4a2a"
+  },
+  {
+    "seq": 11,
+    "timestamp": "2026-10-28T23:13:31.319592Z",
+    "agent": "response",
+    "action": "action_monitor",
+    "detail": "svc-report (AL-0005): applied - Continuous monitoring active",
+    "prev_hash": "ac8c07477160321b6bc896255cc030d33c2eac3549baf410e1b97b7d1d86eaab",
+    "hash": "efca5450e2a2fe9bc281ba021a2560d136cd1c39d267ed127da6dfba541dfc1b"
+  },
+  {
+    "seq": 10,
+    "timestamp": "2026-10-28T23:13:31.305087Z",
+    "agent": "response",
+    "action": "action_restrict",
+    "detail": "anita.rao (AL-0004): applied - simulated:restrict:ok",
+    "prev_hash": "e691f840ac64fcde0261f9008b74a72f3a7b1add711916127dbafe01591a6a96",
+    "hash": "ac8c07477160321b6bc896255cc030d33c2eac3549baf410e1b97b7d1d86eaab"
+  },
+  {
+    "seq": 9,
+    "timestamp": "2026-10-28T23:13:31.291070Z",
+    "agent": "scoring",
+    "action": "high_risk_alert",
+    "detail": "AL-0004 (anita.rao): risk 70.3 (restrict)",
+    "prev_hash": "68190d18fcfac43c3bf715a0d851a9d38ea6aee7510525e8cdb775c95839c726",
+    "hash": "e691f840ac64fcde0261f9008b74a72f3a7b1add711916127dbafe01591a6a96"
+  },
+  {
+    "seq": 8,
+    "timestamp": "2026-10-28T23:13:31.283072Z",
+    "agent": "scoring",
+    "action": "high_risk_alert",
+    "detail": "AL-0003 (meera.n): risk 100.0 (revoke)",
+    "prev_hash": "834e6a69ef51db100e07bd5a06e2afcbcbfb4e8cde621491674442d60421ebc6",
+    "hash": "68190d18fcfac43c3bf715a0d851a9d38ea6aee7510525e8cdb775c95839c726"
+  },
+  {
+    "seq": 7,
+    "timestamp": "2026-10-28T23:13:31.276068Z",
+    "agent": "scoring",
+    "action": "high_risk_alert",
+    "detail": "AL-0002 (dev.kumar): risk 100.0 (revoke)",
+    "prev_hash": "c1a1ffa64619d75c80fc4c759958b852b5093bb2f6411fc4864e1b453c2ab263",
+    "hash": "834e6a69ef51db100e07bd5a06e2afcbcbfb4e8cde621491674442d60421ebc6"
+  },
+  {
+    "seq": 6,
+    "timestamp": "2026-10-28T23:13:31.268072Z",
+    "agent": "scoring",
+    "action": "high_risk_alert",
+    "detail": "AL-0001 (svc-report): risk 100.0 (revoke)",
+    "prev_hash": "fc5baddcbd050c66d5d8125dec7cd2a952fc32558f947c8f7996393c5547df03",
+    "hash": "c1a1ffa64619d75c80fc4c759958b852b5093bb2f6411fc4864e1b453c2ab263"
+  },
+  {
+    "seq": 5,
+    "timestamp": "2026-10-28T23:13:31.261069Z",
+    "agent": "orchestrator",
+    "action": "pipeline_start",
+    "detail": "Mode: sample, Events: 3302",
+    "prev_hash": "2321bf683f7a0688170d4fb343637abfde4ed90d7b13b19c8f894267576a2a0c",
+    "hash": "fc5baddcbd050c66d5d8125dec7cd2a952fc32558f947c8f7996393c5547df03"
+  },
+  {
+    "seq": 4,
+    "timestamp": "2026-10-28T23:12:13.229706Z",
+    "agent": "feedback",
+    "action": "feedback_tp",
+    "detail": "Alert AL-FB-TEST labeled tp",
+    "prev_hash": "255b73665738dac53599d61b6e613564c3d11e4b754904ea851e71ff99b6cc61",
+    "hash": "2321bf683f7a0688170d4fb343637abfde4ed90d7b13b19c8f894267576a2a0c"
+  },
+  {
+    "seq": 3,
+    "timestamp": "2026-10-28T23:12:13.205353Z",
+    "agent": "response",
+    "action": "action_revoke",
+    "detail": "u-revoke (AL-REVOKE-TEST): applied - simulated:revoke:ok",
+    "prev_hash": "c18d13ba89a93e9200dcfe2b8278ebe2d6ce7f1ec427bd050de325139417cb84",
+    "hash": "255b73665738dac53599d61b6e613564c3d11e4b754904ea851e71ff99b6cc61"
+  },
+  {
+    "seq": 2,
+    "timestamp": "2026-10-28T23:02:45.443130Z",
+    "agent": "test",
+    "action": "init",
+    "detail": "ok",
+    "prev_hash": "204dd052b277f1597b58d9abcfdcc432148f2b69a6533cc24e855169cfaff142",
+    "hash": "c18d13ba89a93e9200dcfe2b8278ebe2d6ce7f1ec427bd050de325139417cb84"
+  },
+  {
+    "seq": 1,
+    "timestamp": "2026-10-28T23:02:32.309043Z",
+    "agent": "test",
+    "action": "check",
+    "detail": "ok",
+    "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "hash": "204dd052b277f1597b58d9abcfdcc432148f2b69a6533cc24e855169cfaff142"
+  }
+]

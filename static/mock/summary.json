@@ -1,0 +1,22 @@
+{
+  "by_band": {
+    "monitor": 0,
+    "step_up": 0,
+    "restrict": 0,
+    "revoke": 0
+  },
+  "by_pattern": {
+    "P1": 0,
+    "P2": 0,
+    "P3": 0,
+    "P4": 0,
+    "P5": 0,
+    "ML": 0
+  },
+  "top_identities": [],
+  "totals": {
+    "events": 0,
+    "alerts": 0,
+    "identities": 0
+  }
+}
