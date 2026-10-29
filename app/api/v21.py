@@ -26,6 +26,9 @@ except Exception:  # noqa: BLE001
 def _res(request: Request):
     res = getattr(request.app.state, "result", None)
     if res is None:
+        from app.main import get_or_run_pipeline
+        res = get_or_run_pipeline(request.app)
+    if res is None:
         raise HTTPException(status_code=503, detail="Pipeline has not produced results yet")
     return res
 

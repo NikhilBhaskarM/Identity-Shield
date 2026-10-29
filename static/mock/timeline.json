@@ -1,0 +1,351 @@
+[
+  {
+    "event": {
+      "event_id": "okta-1825",
+      "source": "okta",
+      "timestamp": "2026-10-28T09:00:00Z",
+      "identity_id": "svc-report",
+      "session_id": "okta:sess-svc-escalation",
+      "action": "user.session.start",
+      "category": "auth",
+      "outcome": "success",
+      "src_ip": "198.51.100.99",
+      "country": "India",
+      "city": "Bengaluru",
+      "lat": 12.9716,
+      "lon": 77.5946,
+      "asn": "55836",
+      "user_agent": "curl/7.88.1",
+      "device_id": null,
+      "token_id": null,
+      "region": null,
+      "resource": null,
+      "resource_sensitivity": 1,
+      "privilege_level": 4,
+      "label": "dormant_reactivation"
+    },
+    "signals": [
+      {
+        "pattern": "ML",
+        "severity": 1.0,
+        "identity_id": "svc-report",
+        "session_id": "okta:sess-svc-escalation",
+        "agent": "baseline_ml",
+        "reason": "Session behavior is unusual compared with normal activity (anomaly score 1.00).",
+        "evidence_event_ids": [
+          "okta-1825",
+          "ct-3469",
+          "ct-3470",
+          "ct-3471",
+          "ct-3472"
+        ],
+        "mitre": [],
+        "timestamp": "2026-10-28T09:11:00Z"
+      }
+    ]
+  },
+  {
+    "event": {
+      "event_id": "ct-3469",
+      "source": "cloudtrail",
+      "timestamp": "2026-10-28T09:01:00Z",
+      "identity_id": "svc-report",
+      "session_id": "okta:sess-svc-escalation",
+      "action": "CreateAccessKey",
+      "category": "api",
+      "outcome": "success",
+      "src_ip": "198.51.100.99",
+      "country": "India",
+      "city": "Bengaluru",
+      "lat": 12.9716,
+      "lon": 77.5946,
+      "asn": "55836",
+      "user_agent": "aws-cli/2.13.5",
+      "device_id": null,
+      "token_id": "AKIAESCALATIONKEY01",
+      "region": "ap-south-1",
+      "resource": "svc-report",
+      "resource_sensitivity": 2,
+      "privilege_level": 4,
+      "label": "privilege_escalation"
+    },
+    "signals": [
+      {
+        "pattern": "P3",
+        "severity": 1.0,
+        "identity_id": "svc-report",
+        "session_id": "okta:sess-svc-escalation",
+        "agent": "priv_escalation",
+        "reason": "Escalation chain: CreateAccessKey -> AttachUserPolicy -> AssumeRole -> GetSecretValue.",
+        "evidence_event_ids": [
+          "ct-3469",
+          "ct-3470",
+          "ct-3471",
+          "ct-3472"
+        ],
+        "mitre": [
+          "T1098",
+          "T1548"
+        ],
+        "timestamp": "2026-10-28T09:11:00Z"
+      },
+      {
+        "pattern": "P4",
+        "severity": 0.8,
+        "identity_id": "svc-report",
+        "session_id": "okta:sess-svc-escalation",
+        "agent": "api_anomaly",
+        "reason": "Unusual API call 'CreateAccessKey': sensitive action.",
+        "evidence_event_ids": [
+          "ct-3469"
+        ],
+        "mitre": [
+          "T1526",
+          "T1562"
+        ],
+        "timestamp": "2026-10-28T09:01:00Z"
+      },
+      {
+        "pattern": "ML",
+        "severity": 1.0,
+        "identity_id": "svc-report",
+        "session_id": "okta:sess-svc-escalation",
+        "agent": "baseline_ml",
+        "reason": "Session behavior is unusual compared with normal activity (anomaly score 1.00).",
+        "evidence_event_ids": [
+          "okta-1825",
+          "ct-3469",
+          "ct-3470",
+          "ct-3471",
+          "ct-3472"
+        ],
+        "mitre": [],
+        "timestamp": "2026-10-28T09:11:00Z"
+      }
+    ]
+  },
+  {
+    "event": {
+      "event_id": "ct-3470",
+      "source": "cloudtrail",
+      "timestamp": "2026-10-28T09:04:00Z",
+      "identity_id": "svc-report",
+      "session_id": "okta:sess-svc-escalation",
+      "action": "AttachUserPolicy",
+      "category": "api",
+      "outcome": "success",
+      "src_ip": "198.51.100.99",
+      "country": "India",
+      "city": "Bengaluru",
+      "lat": 12.9716,
+      "lon": 77.5946,
+      "asn": "55836",
+      "user_agent": "aws-cli/2.13.5",
+      "device_id": null,
+      "token_id": "AKIAESCALATIONKEY01",
+      "region": "ap-south-1",
+      "resource": "arn:aws:iam::aws:policy/AdministratorAccess",
+      "resource_sensitivity": 5,
+      "privilege_level": 4,
+      "label": "privilege_escalation"
+    },
+    "signals": [
+      {
+        "pattern": "P3",
+        "severity": 1.0,
+        "identity_id": "svc-report",
+        "session_id": "okta:sess-svc-escalation",
+        "agent": "priv_escalation",
+        "reason": "Escalation chain: CreateAccessKey -> AttachUserPolicy -> AssumeRole -> GetSecretValue.",
+        "evidence_event_ids": [
+          "ct-3469",
+          "ct-3470",
+          "ct-3471",
+          "ct-3472"
+        ],
+        "mitre": [
+          "T1098",
+          "T1548"
+        ],
+        "timestamp": "2026-10-28T09:11:00Z"
+      },
+      {
+        "pattern": "P4",
+        "severity": 0.8,
+        "identity_id": "svc-report",
+        "session_id": "okta:sess-svc-escalation",
+        "agent": "api_anomaly",
+        "reason": "Unusual API call 'AttachUserPolicy': sensitive action.",
+        "evidence_event_ids": [
+          "ct-3470"
+        ],
+        "mitre": [
+          "T1526",
+          "T1562"
+        ],
+        "timestamp": "2026-10-28T09:04:00Z"
+      },
+      {
+        "pattern": "ML",
+        "severity": 1.0,
+        "identity_id": "svc-report",
+        "session_id": "okta:sess-svc-escalation",
+        "agent": "baseline_ml",
+        "reason": "Session behavior is unusual compared with normal activity (anomaly score 1.00).",
+        "evidence_event_ids": [
+          "okta-1825",
+          "ct-3469",
+          "ct-3470",
+          "ct-3471",
+          "ct-3472"
+        ],
+        "mitre": [],
+        "timestamp": "2026-10-28T09:11:00Z"
+      }
+    ]
+  },
+  {
+    "event": {
+      "event_id": "ct-3471",
+      "source": "cloudtrail",
+      "timestamp": "2026-10-28T09:07:00Z",
+      "identity_id": "svc-report",
+      "session_id": "okta:sess-svc-escalation",
+      "action": "AssumeRole",
+      "category": "api",
+      "outcome": "success",
+      "src_ip": "198.51.100.99",
+      "country": "India",
+      "city": "Bengaluru",
+      "lat": 12.9716,
+      "lon": 77.5946,
+      "asn": "55836",
+      "user_agent": "aws-cli/2.13.5",
+      "device_id": null,
+      "token_id": "AKIAESCALATIONKEY01",
+      "region": "ap-south-1",
+      "resource": "arn:aws:iam::123456789012:role/AdminRole",
+      "resource_sensitivity": 5,
+      "privilege_level": 4,
+      "label": "privilege_escalation"
+    },
+    "signals": [
+      {
+        "pattern": "P3",
+        "severity": 1.0,
+        "identity_id": "svc-report",
+        "session_id": "okta:sess-svc-escalation",
+        "agent": "priv_escalation",
+        "reason": "Escalation chain: CreateAccessKey -> AttachUserPolicy -> AssumeRole -> GetSecretValue.",
+        "evidence_event_ids": [
+          "ct-3469",
+          "ct-3470",
+          "ct-3471",
+          "ct-3472"
+        ],
+        "mitre": [
+          "T1098",
+          "T1548"
+        ],
+        "timestamp": "2026-10-28T09:11:00Z"
+      },
+      {
+        "pattern": "ML",
+        "severity": 1.0,
+        "identity_id": "svc-report",
+        "session_id": "okta:sess-svc-escalation",
+        "agent": "baseline_ml",
+        "reason": "Session behavior is unusual compared with normal activity (anomaly score 1.00).",
+        "evidence_event_ids": [
+          "okta-1825",
+          "ct-3469",
+          "ct-3470",
+          "ct-3471",
+          "ct-3472"
+        ],
+        "mitre": [],
+        "timestamp": "2026-10-28T09:11:00Z"
+      }
+    ]
+  },
+  {
+    "event": {
+      "event_id": "ct-3472",
+      "source": "cloudtrail",
+      "timestamp": "2026-10-28T09:11:00Z",
+      "identity_id": "svc-report",
+      "session_id": "okta:sess-svc-escalation",
+      "action": "GetSecretValue",
+      "category": "api",
+      "outcome": "success",
+      "src_ip": "198.51.100.99",
+      "country": "India",
+      "city": "Bengaluru",
+      "lat": 12.9716,
+      "lon": 77.5946,
+      "asn": "55836",
+      "user_agent": "aws-cli/2.13.5",
+      "device_id": null,
+      "token_id": "AKIAESCALATIONKEY01",
+      "region": "ap-south-1",
+      "resource": "arn:aws:secretsmanager:ap-south-1:123456789012:secret:prod/db/master-credentials",
+      "resource_sensitivity": 5,
+      "privilege_level": 4,
+      "label": "privilege_escalation"
+    },
+    "signals": [
+      {
+        "pattern": "P3",
+        "severity": 1.0,
+        "identity_id": "svc-report",
+        "session_id": "okta:sess-svc-escalation",
+        "agent": "priv_escalation",
+        "reason": "Escalation chain: CreateAccessKey -> AttachUserPolicy -> AssumeRole -> GetSecretValue.",
+        "evidence_event_ids": [
+          "ct-3469",
+          "ct-3470",
+          "ct-3471",
+          "ct-3472"
+        ],
+        "mitre": [
+          "T1098",
+          "T1548"
+        ],
+        "timestamp": "2026-10-28T09:11:00Z"
+      },
+      {
+        "pattern": "P4",
+        "severity": 0.8,
+        "identity_id": "svc-report",
+        "session_id": "okta:sess-svc-escalation",
+        "agent": "api_anomaly",
+        "reason": "Unusual API call 'GetSecretValue': sensitive action.",
+        "evidence_event_ids": [
+          "ct-3472"
+        ],
+        "mitre": [
+          "T1526",
+          "T1562"
+        ],
+        "timestamp": "2026-10-28T09:11:00Z"
+      },
+      {
+        "pattern": "ML",
+        "severity": 1.0,
+        "identity_id": "svc-report",
+        "session_id": "okta:sess-svc-escalation",
+        "agent": "baseline_ml",
+        "reason": "Session behavior is unusual compared with normal activity (anomaly score 1.00).",
+        "evidence_event_ids": [
+          "okta-1825",
+          "ct-3469",
+          "ct-3470",
+          "ct-3471",
+          "ct-3472"
+        ],
+        "mitre": [],
+        "timestamp": "2026-10-28T09:11:00Z"
+      }
+    ]
+  }
+]

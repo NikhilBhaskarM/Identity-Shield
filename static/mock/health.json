@@ -1,8 +1,8 @@
 {
   "status": "ok",
-  "pipeline": "failed",
-  "detail": "No events after normalization",
-  "data_mode": "official",
-  "events": 0,
-  "alerts": 0
+  "pipeline": "ok",
+  "detail": "Analyzed 3302 events, 27 alerts generated.",
+  "data_mode": "sample",
+  "events": 3302,
+  "alerts": 27
 }

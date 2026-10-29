@@ -12,22 +12,14 @@
       ],
       "state": "done",
       "runs": 1,
-      "last_started": "2026-10-28T16:11:21.249359+00:00",
-      "last_finished": "2026-10-28T16:11:21.249395+00:00",
-      "last_duration_ms": 0.0,
-      "last_message": "Loaded 2,967 records from 2 files",
+      "last_started": "2026-10-29T00:40:26.911995+00:00",
+      "last_finished": "2026-10-29T00:40:26.937617+00:00",
+      "last_duration_ms": 25.3,
+      "last_message": "Loaded 2476 CT and 826 Okta records",
       "last_output": {
-        "files": {
-          "cloudtrail": [
-            "cloudtrail.json"
-          ],
-          "okta": [
-            "okta.json"
-          ]
-        },
         "records": {
-          "cloudtrail": 2214,
-          "okta": 753
+          "cloudtrail": 2476,
+          "okta": 826
         },
         "skipped": 0
       },
@@ -47,28 +39,14 @@
       ],
       "state": "done",
       "runs": 1,
-      "last_started": "2026-10-28T16:11:21.249537+00:00",
-      "last_finished": "2026-10-28T16:11:21.249577+00:00",
-      "last_duration_ms": 0.0,
-      "last_message": "2,967 events normalized for 21 identities",
+      "last_started": "2026-10-29T00:40:26.937617+00:00",
+      "last_finished": "2026-10-29T00:40:26.993269+00:00",
+      "last_duration_ms": 56.3,
+      "last_message": "Normalized 3302 events (20 identities)",
       "last_output": {
-        "events": 2967,
+        "events": 3302,
         "skipped": 0,
-        "sources": {
-          "cloudtrail": 2214,
-          "okta": 753
-        },
-        "identities": 21,
-        "sample_event": {
-          "event_id": "ct-1a7f",
-          "source": "cloudtrail",
-          "timestamp": "2026-10-28T04:21:12+00:00",
-          "identity_id": "svc-report",
-          "action": "AttachUserPolicy",
-          "category": "api",
-          "src_ip": "185.220.101.4",
-          "resource": "arn:aws:iam::aws:policy/AdministratorAccess"
-        }
+        "identities": 20
       },
       "last_error": "",
       "signals": null
@@ -86,14 +64,13 @@
       ],
       "state": "done",
       "runs": 1,
-      "last_started": "2026-10-28T16:11:21.249635+00:00",
-      "last_finished": "2026-10-28T16:11:21.249652+00:00",
-      "last_duration_ms": 0.0,
-      "last_message": "Enriched 2,967 events · 61 touch sensitive resources",
+      "last_started": "2026-10-29T00:40:26.993269+00:00",
+      "last_finished": "2026-10-29T00:40:27.262593+00:00",
+      "last_duration_ms": 268.8,
+      "last_message": "Enriched 3302 events",
       "last_output": {
-        "geo_filled": 2140,
-        "privileged_identities": 3,
-        "sensitive_events": 61
+        "events": 3302,
+        "privileged_identities": 373
       },
       "last_error": "",
       "signals": null
@@ -111,17 +88,15 @@
       ],
       "state": "done",
       "runs": 1,
-      "last_started": "2026-10-28T16:11:21.249680+00:00",
-      "last_finished": "2026-10-28T16:11:21.249696+00:00",
-      "last_duration_ms": 0.0,
-      "last_message": "412 sessions · identity graph 964 nodes / 3,311 edges",
+      "last_started": "2026-10-29T00:40:27.262593+00:00",
+      "last_finished": "2026-10-29T00:40:27.913396+00:00",
+      "last_duration_ms": 650.4,
+      "last_message": "Correlated 826 sessions, built graph with 878 nodes",
       "last_output": {
-        "sessions": 412,
-        "okta_linked": 388,
-        "aws_only": 24,
+        "sessions": 826,
         "graph": {
-          "nodes": 964,
-          "edges": 3311
+          "nodes": 878,
+          "edges": 2454
         }
       },
       "last_error": "",
@@ -139,21 +114,17 @@
       ],
       "state": "done",
       "runs": 1,
-      "last_started": "2026-10-28T16:11:21.249725+00:00",
-      "last_finished": "2026-10-28T16:11:21.249738+00:00",
-      "last_duration_ms": 0.0,
-      "last_message": "1 signal · anita.rao 14,812 km/h",
+      "last_started": "2026-10-29T00:40:27.913396+00:00",
+      "last_finished": "2026-10-29T00:40:27.950000+00:00",
+      "last_duration_ms": 37.7,
+      "last_message": "Generated 1 impossible travel signals",
       "last_output": {
         "signals": 1,
-        "pairs_checked": 731,
         "examples": [
           {
             "identity_id": "anita.rao",
-            "from": "Bengaluru",
-            "to": "Frankfurt",
-            "km": 7406,
-            "minutes": 30,
-            "kmh": 14812
+            "severity": 1.0,
+            "reason": "Login from Frankfurt, 7,406 km from Bengaluru, 30 min after previous login (14,812 km/h)."
           }
         ]
       },
@@ -172,17 +143,17 @@
       ],
       "state": "done",
       "runs": 1,
-      "last_started": "2026-10-28T16:11:21.249769+00:00",
-      "last_finished": "2026-10-28T16:11:21.249786+00:00",
-      "last_duration_ms": 0.0,
-      "last_message": "1 signal · svc-report idle 47 days",
+      "last_started": "2026-10-29T00:40:27.950000+00:00",
+      "last_finished": "2026-10-29T00:40:28.059868+00:00",
+      "last_duration_ms": 108.6,
+      "last_message": "Generated 1 dormant account signals",
       "last_output": {
         "signals": 1,
         "examples": [
           {
             "identity_id": "svc-report",
-            "idle_days": 47,
-            "privilege_level": 5
+            "severity": 0.9,
+            "reason": "Account inactive for 54 days before this activity."
           }
         ]
       },
@@ -202,22 +173,17 @@
       ],
       "state": "done",
       "runs": 1,
-      "last_started": "2026-10-28T16:11:21.249811+00:00",
-      "last_finished": "2026-10-28T16:11:21.249824+00:00",
-      "last_duration_ms": 0.0,
-      "last_message": "1 chain · 4 steps in 11 min",
+      "last_started": "2026-10-29T00:40:28.059868+00:00",
+      "last_finished": "2026-10-29T00:40:28.139119+00:00",
+      "last_duration_ms": 79.0,
+      "last_message": "Generated 1 escalation signals",
       "last_output": {
         "signals": 1,
-        "chains": [
+        "examples": [
           {
-            "session_id": "okta:102svcR7",
-            "steps": [
-              "CredCreate",
-              "PermGrant",
-              "RoleAssume",
-              "Impact"
-            ],
-            "minutes": 11
+            "identity_id": "svc-report",
+            "severity": 1.0,
+            "reason": "Escalation chain: CreateAccessKey -> AttachUserPolicy -> AssumeRole -> GetSecretValue."
           }
         ]
       },
@@ -236,23 +202,32 @@
       ],
       "state": "done",
       "runs": 1,
-      "last_started": "2026-10-28T16:11:21.249852+00:00",
-      "last_finished": "2026-10-28T16:11:21.249865+00:00",
-      "last_duration_ms": 0.0,
-      "last_message": "2 signals · StopLogging in a new region",
+      "last_started": "2026-10-29T00:40:28.139119+00:00",
+      "last_finished": "2026-10-29T00:40:28.353576+00:00",
+      "last_duration_ms": 214.9,
+      "last_message": "Generated 5 API anomaly signals",
       "last_output": {
-        "signals": 2,
+        "signals": 5,
         "examples": [
           {
-            "identity_id": "dev.kumar",
-            "action": "StopLogging",
-            "region": "sa-east-1",
-            "new_region": true
+            "identity_id": "svc-report",
+            "severity": 0.8,
+            "reason": "Unusual API call 'CreateAccessKey': sensitive action."
+          },
+          {
+            "identity_id": "svc-report",
+            "severity": 0.8,
+            "reason": "Unusual API call 'AttachUserPolicy': sensitive action."
+          },
+          {
+            "identity_id": "svc-report",
+            "severity": 0.8,
+            "reason": "Unusual API call 'GetSecretValue': sensitive action."
           }
         ]
       },
       "last_error": "",
-      "signals": 2
+      "signals": 5
     },
     {
       "id": "token_abuse",
@@ -266,26 +241,32 @@
       ],
       "state": "done",
       "runs": 1,
-      "last_started": "2026-10-28T16:11:21.249889+00:00",
-      "last_finished": "2026-10-28T16:11:21.249902+00:00",
-      "last_duration_ms": 0.0,
-      "last_message": "1 signal · same key in IN and BR within 3 min",
+      "last_started": "2026-10-29T00:40:28.353576+00:00",
+      "last_finished": "2026-10-29T00:40:28.779824+00:00",
+      "last_duration_ms": 426.2,
+      "last_message": "Generated 7 token abuse signals",
       "last_output": {
-        "signals": 1,
+        "signals": 7,
         "examples": [
           {
+            "identity_id": "dev.kumar",
+            "severity": 0.6,
+            "reason": "User-Agent changed mid-session from 'aws-sdk-go/v2' to 'Boto3/1.28.3'."
+          },
+          {
             "identity_id": "meera.n",
-            "token": "AKIA...Q7",
-            "countries": [
-              "IN",
-              "BR"
-            ],
-            "minutes": 3
+            "severity": 0.6,
+            "reason": "User-Agent changed mid-session from 'aws-sdk-go/v2' to 'aws-sdk-js/v3'."
+          },
+          {
+            "identity_id": "meera.n",
+            "severity": 0.9,
+            "reason": "Token 'AKIAMERRATOKEN77' used concurrently from 203.0.113.12 and 177.18.90.12 within 5 minutes."
           }
         ]
       },
       "last_error": "",
-      "signals": 1
+      "signals": 7
     },
     {
       "id": "baseline_ml",
@@ -299,27 +280,15 @@
       ],
       "state": "done",
       "runs": 1,
-      "last_started": "2026-10-28T16:11:21.249928+00:00",
-      "last_finished": "2026-10-28T16:11:21.249942+00:00",
-      "last_duration_ms": 0.0,
-      "last_message": "2 sessions above anomaly threshold 0.60",
+      "last_started": "2026-10-29T00:40:28.780819+00:00",
+      "last_finished": "2026-10-29T00:40:30.068381+00:00",
+      "last_duration_ms": 1286.9,
+      "last_message": "ML flagged 26 anomalous sessions",
       "last_output": {
-        "signals": 2,
-        "trained_on": 398,
-        "features": 13,
-        "top_scores": [
-          {
-            "session_id": "okta:55aniK9",
-            "score": 0.91
-          },
-          {
-            "session_id": "okta:102svcR7",
-            "score": 0.84
-          }
-        ]
+        "signals": 26
       },
       "last_error": "",
-      "signals": 2
+      "signals": 26
     },
     {
       "id": "risk_scoring",
@@ -334,23 +303,13 @@
       ],
       "state": "done",
       "runs": 1,
-      "last_started": "2026-10-28T16:11:21.249976+00:00",
-      "last_finished": "2026-10-28T16:11:21.249992+00:00",
-      "last_duration_ms": 0.0,
-      "last_message": "4 alerts · top risk 94 (svc-report)",
+      "last_started": "2026-10-29T00:40:30.068381+00:00",
+      "last_finished": "2026-10-29T00:40:30.136236+00:00",
+      "last_duration_ms": 67.5,
+      "last_message": "Scored 27 alerts (top risk: 100.0)",
       "last_output": {
-        "sessions_scored": 7,
-        "alerts": 4,
-        "bands": {
-          "revoke": 1,
-          "restrict": 2,
-          "step_up": 1,
-          "monitor": 0
-        },
-        "top": {
-          "alert_id": "AL-0001",
-          "risk": 94.0
-        }
+        "alerts": 27,
+        "top_risk": 100.0
       },
       "last_error": "",
       "signals": null
@@ -367,28 +326,12 @@
       ],
       "state": "done",
       "runs": 1,
-      "last_started": "2026-10-28T16:11:21.250021+00:00",
-      "last_finished": "2026-10-28T16:11:21.250035+00:00",
+      "last_started": "2026-10-29T00:40:30.136236+00:00",
+      "last_finished": "2026-10-29T00:40:30.136236+00:00",
       "last_duration_ms": 0.0,
-      "last_message": "4 alerts explained with evidence",
+      "last_message": "Generated explanations for 27 alerts",
       "last_output": {
-        "alerts_explained": 4,
-        "counterfactuals": {
-          "AL-0001": {
-            "without P3": 44.0,
-            "without P2": 61.0
-          }
-        },
-        "mitre": [
-          "T1078",
-          "T1078.004",
-          "T1098",
-          "T1526",
-          "T1539",
-          "T1548",
-          "T1550",
-          "T1562"
-        ]
+        "alerts_explained": 27
       },
       "last_error": "",
       "signals": null
@@ -405,34 +348,13 @@
       ],
       "state": "done",
       "runs": 1,
-      "last_started": "2026-10-28T16:11:21.250064+00:00",
-      "last_finished": "2026-10-28T16:11:21.250075+00:00",
-      "last_duration_ms": 0.0,
-      "last_message": "3 actions applied · 1 revoke awaiting analyst approval",
+      "last_started": "2026-10-29T00:40:30.136236+00:00",
+      "last_finished": "2026-10-29T00:40:30.945587+00:00",
+      "last_duration_ms": 809.1,
+      "last_message": "Applied 24 actions automatically (3 pending approval)",
       "last_output": {
-        "applied": [
-          {
-            "alert_id": "AL-0002",
-            "action": "restrict",
-            "result": "simulated:restrict:ok"
-          },
-          {
-            "alert_id": "AL-0003",
-            "action": "restrict",
-            "result": "simulated:restrict:ok"
-          },
-          {
-            "alert_id": "AL-0004",
-            "action": "step_up",
-            "result": "simulated:step_up:ok"
-          }
-        ],
-        "pending_approval": [
-          {
-            "alert_id": "AL-0001",
-            "action": "revoke"
-          }
-        ]
+        "applied": 24,
+        "pending_approval": 3
       },
       "last_error": "",
       "signals": null
@@ -468,30 +390,31 @@
         "coordinate",
         "write:audit"
       ],
-      "state": "done",
-      "runs": 1,
-      "last_started": "2026-10-28T16:11:21.249224+00:00",
-      "last_finished": "2026-10-28T16:11:21.257797+00:00",
-      "last_duration_ms": 8.6,
-      "last_message": "Scan complete · 4 threat(s) logged",
-      "last_output": {
-        "status": "ok",
-        "alerts": 4,
-        "threats_logged": 4,
-        "detail": ""
-      },
+      "state": "idle",
+      "runs": 0,
+      "last_started": null,
+      "last_finished": null,
+      "last_duration_ms": null,
+      "last_message": "",
+      "last_output": null,
       "last_error": "",
       "signals": null
     }
   ],
   "run": {
-    "run_id": "scan-20261028-161121-43d1",
-    "mode": "dataset",
-    "state": "done",
-    "started_at": "2026-10-28T16:11:21.249206+00:00",
-    "finished_at": "2026-10-28T16:11:21.257774+00:00",
-    "duration_ms": 8.6,
-    "current": null,
+    "run_id": null,
+    "mode": null,
+    "state": "idle",
+    "started_at": null,
+    "finished_at": null,
+    "duration_ms": null,
+    "current": {
+      "agent_id": "response",
+      "agent_num": 13,
+      "agent_name": "Response Agent",
+      "message": "Choosing actions (simulator only)",
+      "seq": 25
+    },
     "completed": [
       "ingestion",
       "normalization",
@@ -508,15 +431,10 @@
       "response"
     ],
     "failed": [],
-    "threats": 4,
-    "summary": {
-      "status": "ok",
-      "alerts": 4,
-      "threats_logged": 4,
-      "detail": ""
-    },
+    "threats": 0,
+    "summary": null,
     "total_steps": 13,
     "progress": 1.0,
-    "last_seq": 32
+    "last_seq": 26
   }
 }

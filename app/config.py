@@ -7,7 +7,7 @@ RAW_CLOUDTRAIL = DATA_DIR / "raw" / "cloudtrail"
 RAW_OKTA = DATA_DIR / "raw" / "okta"
 METADATA_DIR = DATA_DIR / "metadata"
 LABELS_DIR = DATA_DIR / "labels"
-SAMPLE_DIR = DATA_DIR / "sample"
+SAMPLE_DIR = (DATA_DIR / "sample") if (DATA_DIR / "sample").is_dir() else (Path("/tmp/sample") if os.environ.get("VERCEL") else (DATA_DIR / "sample"))
 DB_PATH = Path(os.environ.get("IDENTITYSHIELD_DB_PATH", "/tmp/identityshield.db" if os.environ.get("VERCEL") else str(DATA_DIR / "identityshield.db")))
 STATIC_DIR = ROOT / "static"
 

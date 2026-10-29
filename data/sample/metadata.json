@@ -1,0 +1,165 @@
+[
+  {
+    "identity_id": "anita.rao",
+    "email": "anita.rao@corp.example",
+    "privilege_level": 3,
+    "groups": [
+      "Engineering",
+      "DevOps"
+    ]
+  },
+  {
+    "identity_id": "dev.kumar",
+    "email": "dev.kumar@corp.example",
+    "privilege_level": 3,
+    "groups": [
+      "Engineering",
+      "DevOps"
+    ]
+  },
+  {
+    "identity_id": "meera.n",
+    "email": "meera.n@corp.example",
+    "privilege_level": 1,
+    "groups": [
+      "Employees"
+    ]
+  },
+  {
+    "identity_id": "arjun.sharma",
+    "email": "arjun.sharma@corp.example",
+    "privilege_level": 1,
+    "groups": [
+      "Employees"
+    ]
+  },
+  {
+    "identity_id": "priya.patel",
+    "email": "priya.patel@corp.example",
+    "privilege_level": 1,
+    "groups": [
+      "Employees"
+    ]
+  },
+  {
+    "identity_id": "rahul.verma",
+    "email": "rahul.verma@corp.example",
+    "privilege_level": 1,
+    "groups": [
+      "Employees"
+    ]
+  },
+  {
+    "identity_id": "sneha.reddy",
+    "email": "sneha.reddy@corp.example",
+    "privilege_level": 1,
+    "groups": [
+      "Employees"
+    ]
+  },
+  {
+    "identity_id": "vikram.singh",
+    "email": "vikram.singh@corp.example",
+    "privilege_level": 1,
+    "groups": [
+      "Employees"
+    ]
+  },
+  {
+    "identity_id": "neha.gupta",
+    "email": "neha.gupta@corp.example",
+    "privilege_level": 1,
+    "groups": [
+      "Employees"
+    ]
+  },
+  {
+    "identity_id": "rohit.joshi",
+    "email": "rohit.joshi@corp.example",
+    "privilege_level": 1,
+    "groups": [
+      "Employees"
+    ]
+  },
+  {
+    "identity_id": "kavita.nair",
+    "email": "kavita.nair@corp.example",
+    "privilege_level": 1,
+    "groups": [
+      "Employees"
+    ]
+  },
+  {
+    "identity_id": "suresh.menon",
+    "email": "suresh.menon@corp.example",
+    "privilege_level": 1,
+    "groups": [
+      "Employees"
+    ]
+  },
+  {
+    "identity_id": "pooja.iyer",
+    "email": "pooja.iyer@corp.example",
+    "privilege_level": 1,
+    "groups": [
+      "Employees"
+    ]
+  },
+  {
+    "identity_id": "amit.shah",
+    "email": "amit.shah@corp.example",
+    "privilege_level": 1,
+    "groups": [
+      "Employees"
+    ]
+  },
+  {
+    "identity_id": "deepa.bose",
+    "email": "deepa.bose@corp.example",
+    "privilege_level": 1,
+    "groups": [
+      "Employees"
+    ]
+  },
+  {
+    "identity_id": "manoj.mishra",
+    "email": "manoj.mishra@corp.example",
+    "privilege_level": 1,
+    "groups": [
+      "Employees"
+    ]
+  },
+  {
+    "identity_id": "swati.deshmukh",
+    "email": "swati.deshmukh@corp.example",
+    "privilege_level": 1,
+    "groups": [
+      "Employees"
+    ]
+  },
+  {
+    "identity_id": "sanjay.rao",
+    "email": "sanjay.rao@corp.example",
+    "privilege_level": 1,
+    "groups": [
+      "Employees"
+    ]
+  },
+  {
+    "identity_id": "ananya.sen",
+    "email": "ananya.sen@corp.example",
+    "privilege_level": 1,
+    "groups": [
+      "Employees"
+    ]
+  },
+  {
+    "identity_id": "svc-report",
+    "email": "svc-report@corp.example",
+    "privilege_level": 4,
+    "groups": [
+      "ServiceAccounts",
+      "ReportingAdmin"
+    ]
+  }
+]

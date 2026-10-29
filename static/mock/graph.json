@@ -1,0 +1,275 @@
+{
+  "identity_id": "svc-report",
+  "nodes": [
+    {
+      "id": "ip:198.51.100.99",
+      "label": "198.51.100.99",
+      "kind": "ip",
+      "risk": 0.0
+    },
+    {
+      "id": "session:okta:sess-svc-report-20261028",
+      "label": "okta:sess-svc-report-20261028",
+      "kind": "session",
+      "risk": 0.0
+    },
+    {
+      "id": "session:okta:sess-svc-report-20261027",
+      "label": "okta:sess-svc-report-20261027",
+      "kind": "session",
+      "risk": 0.0
+    },
+    {
+      "id": "session:okta:sess-svc-report-20261026",
+      "label": "okta:sess-svc-report-20261026",
+      "kind": "session",
+      "risk": 0.0
+    },
+    {
+      "id": "ip:203.0.113.29",
+      "label": "203.0.113.29",
+      "kind": "ip",
+      "risk": 0.0
+    },
+    {
+      "id": "role:arn:aws:iam::123456789012:role/AdminRole",
+      "label": "arn:aws:iam::123456789012:role/AdminRole",
+      "kind": "role",
+      "risk": 0.0
+    },
+    {
+      "id": "res:arn:aws:s3:::corp-data-lake/reports/daily.csv",
+      "label": "arn:aws:s3:::corp-data-lake/reports/daily.csv",
+      "kind": "resource",
+      "risk": 0.0
+    },
+    {
+      "id": "res:arn:aws:secretsmanager:ap-south-1:123456789012:secret:prod/db/master-credentials",
+      "label": "arn:aws:secretsmanager:ap-south-1:123456789012:secret:prod/db/master-credentials",
+      "kind": "resource",
+      "risk": 0.0
+    },
+    {
+      "id": "session:okta:sess-svc-escalation",
+      "label": "okta:sess-svc-escalation",
+      "kind": "session",
+      "risk": 0.0
+    },
+    {
+      "id": "res:svc-report",
+      "label": "svc-report",
+      "kind": "resource",
+      "risk": 0.0
+    },
+    {
+      "id": "session:okta:sess-svc-report-20260901",
+      "label": "okta:sess-svc-report-20260901",
+      "kind": "session",
+      "risk": 0.0
+    },
+    {
+      "id": "session:okta:sess-svc-report-20260831",
+      "label": "okta:sess-svc-report-20260831",
+      "kind": "session",
+      "risk": 0.0
+    },
+    {
+      "id": "key:AKIAESCALATIONKEY01",
+      "label": "AKIAESCALATIONKEY01",
+      "kind": "key",
+      "risk": 0.0
+    },
+    {
+      "id": "user:svc-report",
+      "label": "svc-report",
+      "kind": "user",
+      "risk": 0.0
+    },
+    {
+      "id": "res:corp-data-lake",
+      "label": "corp-data-lake",
+      "kind": "resource",
+      "risk": 0.0
+    },
+    {
+      "id": "policy:arn:aws:iam::aws:policy/AdministratorAccess",
+      "label": "arn:aws:iam::aws:policy/AdministratorAccess",
+      "kind": "policy",
+      "risk": 0.0
+    }
+  ],
+  "edges": [
+    {
+      "source": "session:okta:sess-svc-report-20261028",
+      "target": "ip:203.0.113.29",
+      "label": "from_ip",
+      "event_id": "ct-3468",
+      "suspicious": false
+    },
+    {
+      "source": "session:okta:sess-svc-report-20261028",
+      "target": "res:corp-data-lake",
+      "label": "accessed",
+      "event_id": "ct-3467",
+      "suspicious": false
+    },
+    {
+      "source": "session:okta:sess-svc-report-20261027",
+      "target": "ip:203.0.113.29",
+      "label": "from_ip",
+      "event_id": "ct-3405",
+      "suspicious": true
+    },
+    {
+      "source": "session:okta:sess-svc-report-20261027",
+      "target": "res:corp-data-lake",
+      "label": "accessed",
+      "event_id": "ct-3404",
+      "suspicious": true
+    },
+    {
+      "source": "session:okta:sess-svc-report-20261026",
+      "target": "ip:203.0.113.29",
+      "label": "from_ip",
+      "event_id": "ct-3345",
+      "suspicious": false
+    },
+    {
+      "source": "session:okta:sess-svc-report-20261026",
+      "target": "res:arn:aws:s3:::corp-data-lake/reports/daily.csv",
+      "label": "accessed",
+      "event_id": "ct-3345",
+      "suspicious": false
+    },
+    {
+      "source": "session:okta:sess-svc-escalation",
+      "target": "ip:198.51.100.99",
+      "label": "from_ip",
+      "event_id": "ct-3472",
+      "suspicious": true
+    },
+    {
+      "source": "session:okta:sess-svc-escalation",
+      "target": "res:svc-report",
+      "label": "accessed",
+      "event_id": "ct-3469",
+      "suspicious": true
+    },
+    {
+      "source": "session:okta:sess-svc-escalation",
+      "target": "role:arn:aws:iam::123456789012:role/AdminRole",
+      "label": "assumed",
+      "event_id": "ct-3471",
+      "suspicious": true
+    },
+    {
+      "source": "session:okta:sess-svc-escalation",
+      "target": "res:arn:aws:secretsmanager:ap-south-1:123456789012:secret:prod/db/master-credentials",
+      "label": "accessed",
+      "event_id": "ct-3472",
+      "suspicious": true
+    },
+    {
+      "source": "session:okta:sess-svc-report-20260901",
+      "target": "ip:203.0.113.29",
+      "label": "from_ip",
+      "event_id": "ct-1125",
+      "suspicious": true
+    },
+    {
+      "source": "session:okta:sess-svc-report-20260901",
+      "target": "res:corp-data-lake",
+      "label": "accessed",
+      "event_id": "ct-1124",
+      "suspicious": true
+    },
+    {
+      "source": "session:okta:sess-svc-report-20260901",
+      "target": "res:arn:aws:s3:::corp-data-lake/reports/daily.csv",
+      "label": "accessed",
+      "event_id": "ct-1125",
+      "suspicious": true
+    },
+    {
+      "source": "session:okta:sess-svc-report-20260831",
+      "target": "ip:203.0.113.29",
+      "label": "from_ip",
+      "event_id": "ct-1065",
+      "suspicious": true
+    },
+    {
+      "source": "session:okta:sess-svc-report-20260831",
+      "target": "res:arn:aws:s3:::corp-data-lake/reports/daily.csv",
+      "label": "accessed",
+      "event_id": "ct-1064",
+      "suspicious": true
+    },
+    {
+      "source": "user:svc-report",
+      "target": "session:okta:sess-svc-report-20260831",
+      "label": "login",
+      "event_id": "ct-1065",
+      "suspicious": true
+    },
+    {
+      "source": "user:svc-report",
+      "target": "session:okta:sess-svc-report-20260901",
+      "label": "login",
+      "event_id": "ct-1125",
+      "suspicious": true
+    },
+    {
+      "source": "user:svc-report",
+      "target": "session:okta:sess-svc-report-20261026",
+      "label": "login",
+      "event_id": "ct-3345",
+      "suspicious": false
+    },
+    {
+      "source": "user:svc-report",
+      "target": "session:okta:sess-svc-report-20261027",
+      "label": "login",
+      "event_id": "ct-3405",
+      "suspicious": true
+    },
+    {
+      "source": "user:svc-report",
+      "target": "session:okta:sess-svc-report-20261028",
+      "label": "login",
+      "event_id": "ct-3468",
+      "suspicious": false
+    },
+    {
+      "source": "user:svc-report",
+      "target": "session:okta:sess-svc-escalation",
+      "label": "login",
+      "event_id": "ct-3472",
+      "suspicious": true
+    },
+    {
+      "source": "user:svc-report",
+      "target": "key:AKIAESCALATIONKEY01",
+      "label": "created_key",
+      "event_id": "ct-3469",
+      "suspicious": true
+    },
+    {
+      "source": "user:svc-report",
+      "target": "policy:arn:aws:iam::aws:policy/AdministratorAccess",
+      "label": "attached",
+      "event_id": "ct-3470",
+      "suspicious": true
+    }
+  ],
+  "escalation_paths": [
+    [
+      "user:svc-report",
+      "policy:arn:aws:iam::aws:policy/AdministratorAccess"
+    ],
+    [
+      "user:svc-report",
+      "session:okta:sess-svc-escalation",
+      "role:arn:aws:iam::123456789012:role/AdminRole"
+    ]
+  ]
+}

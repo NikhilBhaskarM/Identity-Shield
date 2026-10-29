@@ -2,7 +2,6 @@
 __pycache__/
 *.pyc
 data/identityshield.db
-data/sample/
 scratch_*.py
 .env
 data/outbox/

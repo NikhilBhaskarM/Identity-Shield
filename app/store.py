@@ -53,6 +53,8 @@ def conn() -> sqlite3.Connection:
             DB_PATH.parent.mkdir(parents=True, exist_ok=True)
             _conn = sqlite3.connect(DB_PATH, check_same_thread=False)
             _conn.row_factory = sqlite3.Row
+            _conn.executescript(SCHEMA)
+            _conn.commit()
         return _conn
 
 

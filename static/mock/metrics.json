@@ -1,11 +1,11 @@
 {
-  "event_precision": null,
-  "event_recall": null,
-  "event_f1": null,
-  "session_precision": null,
-  "baseline_event_f1": null,
-  "median_latency_ms": null,
-  "total_events": 0,
-  "total_alerts": 0,
+  "event_precision": 0.133,
+  "event_recall": 1.0,
+  "event_f1": 0.235,
+  "session_precision": 0.222,
+  "baseline_event_f1": 0.0,
+  "median_latency_ms": 0.0,
+  "total_events": 3302,
+  "total_alerts": 27,
   "skipped_records": 0
 }

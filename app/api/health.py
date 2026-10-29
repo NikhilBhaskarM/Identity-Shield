@@ -19,6 +19,9 @@ class PipelineRunRequest(BaseModel):
 @router.get("/health", response_model=Health)
 def get_health(request: Request):
     res = getattr(request.app.state, "result", None)
+    if res is None:
+        from app.main import get_or_run_pipeline
+        res = get_or_run_pipeline(request.app)
     err = getattr(request.app.state, "startup_error", "")
     if res is None:
         return Health(
@@ -51,6 +54,9 @@ def trigger_pipeline(request: Request, body: Optional[PipelineRunRequest] = None
 @router.get("/summary")
 def get_summary(request: Request):
     res = getattr(request.app.state, "result", None)
+    if res is None:
+        from app.main import get_or_run_pipeline
+        res = get_or_run_pipeline(request.app)
     if res is None:
         return clean_json({
             "by_band": {"monitor": 0, "step_up": 0, "restrict": 0, "revoke": 0},

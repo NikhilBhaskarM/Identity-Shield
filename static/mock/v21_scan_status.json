@@ -1,11 +1,17 @@
 {
-  "run_id": "scan-20261028-161121-43d1",
-  "mode": "dataset",
-  "state": "done",
-  "started_at": "2026-10-28T16:11:21.249206+00:00",
-  "finished_at": "2026-10-28T16:11:21.257774+00:00",
-  "duration_ms": 8.6,
-  "current": null,
+  "run_id": null,
+  "mode": null,
+  "state": "idle",
+  "started_at": null,
+  "finished_at": null,
+  "duration_ms": null,
+  "current": {
+    "agent_id": "response",
+    "agent_num": 13,
+    "agent_name": "Response Agent",
+    "message": "Choosing actions (simulator only)",
+    "seq": 25
+  },
   "completed": [
     "ingestion",
     "normalization",
@@ -22,14 +28,9 @@
     "response"
   ],
   "failed": [],
-  "threats": 4,
-  "summary": {
-    "status": "ok",
-    "alerts": 4,
-    "threats_logged": 4,
-    "detail": ""
-  },
+  "threats": 0,
+  "summary": null,
   "total_steps": 13,
   "progress": 1.0,
-  "last_seq": 32
+  "last_seq": 26
 }

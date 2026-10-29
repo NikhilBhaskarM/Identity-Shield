@@ -1,22 +1,58 @@
 {
   "by_band": {
-    "monitor": 0,
+    "monitor": 23,
     "step_up": 0,
-    "restrict": 0,
-    "revoke": 0
+    "restrict": 1,
+    "revoke": 3
   },
   "by_pattern": {
-    "P1": 0,
-    "P2": 0,
-    "P3": 0,
-    "P4": 0,
-    "P5": 0,
-    "ML": 0
+    "P1": 1,
+    "P2": 1,
+    "P3": 1,
+    "P4": 3,
+    "P5": 2,
+    "ML": 26
   },
-  "top_identities": [],
+  "top_identities": [
+    {
+      "identity_id": "dev.kumar",
+      "risk": 100.0,
+      "alerts": 9,
+      "privilege_level": 3,
+      "blast_radius": 1
+    },
+    {
+      "identity_id": "meera.n",
+      "risk": 100.0,
+      "alerts": 2,
+      "privilege_level": 1,
+      "blast_radius": 1
+    },
+    {
+      "identity_id": "svc-report",
+      "risk": 100.0,
+      "alerts": 5,
+      "privilege_level": 4,
+      "blast_radius": 1
+    },
+    {
+      "identity_id": "anita.rao",
+      "risk": 72.2,
+      "alerts": 8,
+      "privilege_level": 3,
+      "blast_radius": 2
+    },
+    {
+      "identity_id": "rahul.verma",
+      "risk": 13.4,
+      "alerts": 1,
+      "privilege_level": 1,
+      "blast_radius": 2
+    }
+  ],
   "totals": {
-    "events": 0,
-    "alerts": 0,
-    "identities": 0
+    "events": 3302,
+    "alerts": 27,
+    "identities": 20
   }
 }

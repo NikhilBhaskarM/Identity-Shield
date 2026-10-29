@@ -1,1 +1,142 @@
-[]
+[
+  {
+    "identity_id": "dev.kumar",
+    "risk": 100.0,
+    "alerts": 9,
+    "privilege_level": 3,
+    "blast_radius": 1
+  },
+  {
+    "identity_id": "meera.n",
+    "risk": 100.0,
+    "alerts": 2,
+    "privilege_level": 1,
+    "blast_radius": 1
+  },
+  {
+    "identity_id": "svc-report",
+    "risk": 100.0,
+    "alerts": 5,
+    "privilege_level": 4,
+    "blast_radius": 1
+  },
+  {
+    "identity_id": "anita.rao",
+    "risk": 72.2,
+    "alerts": 8,
+    "privilege_level": 3,
+    "blast_radius": 2
+  },
+  {
+    "identity_id": "rahul.verma",
+    "risk": 13.4,
+    "alerts": 1,
+    "privilege_level": 1,
+    "blast_radius": 2
+  },
+  {
+    "identity_id": "suresh.menon",
+    "risk": 12.6,
+    "alerts": 1,
+    "privilege_level": 1,
+    "blast_radius": 2
+  },
+  {
+    "identity_id": "priya.patel",
+    "risk": 12.3,
+    "alerts": 1,
+    "privilege_level": 1,
+    "blast_radius": 2
+  },
+  {
+    "identity_id": "amit.shah",
+    "risk": 0.0,
+    "alerts": 0,
+    "privilege_level": 1,
+    "blast_radius": 2
+  },
+  {
+    "identity_id": "ananya.sen",
+    "risk": 0.0,
+    "alerts": 0,
+    "privilege_level": 1,
+    "blast_radius": 2
+  },
+  {
+    "identity_id": "arjun.sharma",
+    "risk": 0.0,
+    "alerts": 0,
+    "privilege_level": 1,
+    "blast_radius": 2
+  },
+  {
+    "identity_id": "deepa.bose",
+    "risk": 0.0,
+    "alerts": 0,
+    "privilege_level": 1,
+    "blast_radius": 2
+  },
+  {
+    "identity_id": "kavita.nair",
+    "risk": 0.0,
+    "alerts": 0,
+    "privilege_level": 1,
+    "blast_radius": 2
+  },
+  {
+    "identity_id": "manoj.mishra",
+    "risk": 0.0,
+    "alerts": 0,
+    "privilege_level": 1,
+    "blast_radius": 2
+  },
+  {
+    "identity_id": "neha.gupta",
+    "risk": 0.0,
+    "alerts": 0,
+    "privilege_level": 1,
+    "blast_radius": 2
+  },
+  {
+    "identity_id": "pooja.iyer",
+    "risk": 0.0,
+    "alerts": 0,
+    "privilege_level": 1,
+    "blast_radius": 2
+  },
+  {
+    "identity_id": "rohit.joshi",
+    "risk": 0.0,
+    "alerts": 0,
+    "privilege_level": 1,
+    "blast_radius": 2
+  },
+  {
+    "identity_id": "sanjay.rao",
+    "risk": 0.0,
+    "alerts": 0,
+    "privilege_level": 1,
+    "blast_radius": 2
+  },
+  {
+    "identity_id": "sneha.reddy",
+    "risk": 0.0,
+    "alerts": 0,
+    "privilege_level": 1,
+    "blast_radius": 2
+  },
+  {
+    "identity_id": "swati.deshmukh",
+    "risk": 0.0,
+    "alerts": 0,
+    "privilege_level": 1,
+    "blast_radius": 2
+  },
+  {
+    "identity_id": "vikram.singh",
+    "risk": 0.0,
+    "alerts": 0,
+    "privilege_level": 1,
+    "blast_radius": 2
+  }
+]

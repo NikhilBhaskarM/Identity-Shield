@@ -1,5 +1,6 @@
 # app/main.py
 import logging
+import threading
 import uuid
 from contextlib import asynccontextmanager
 
@@ -17,17 +18,34 @@ from app.pipeline import run_pipeline
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
 log = logging.getLogger("identityshield")
 
+_pipeline_lock = threading.Lock()
+
+
+def get_or_run_pipeline(target_app: FastAPI | None = None):
+    a = target_app or app
+    res = getattr(a.state, "result", None)
+    if res is not None:
+        return res
+    with _pipeline_lock:
+        res = getattr(a.state, "result", None)
+        if res is not None:
+            return res
+        store.init_db()
+        try:
+            res = run_pipeline()
+            a.state.result = res
+            a.state.startup_error = ""
+            return res
+        except Exception as exc:  # noqa: BLE001
+            log.exception("Pipeline initialization failed")
+            a.state.result = None
+            a.state.startup_error = str(exc)
+            return None
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    store.init_db()
-    try:
-        app.state.result = run_pipeline()
-        app.state.startup_error = ""
-    except Exception as exc:  # noqa: BLE001 - server must still start
-        log.exception("Pipeline failed at startup")
-        app.state.result = None
-        app.state.startup_error = str(exc)
+    get_or_run_pipeline(app)
     yield
 
 

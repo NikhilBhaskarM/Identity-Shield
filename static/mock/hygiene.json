@@ -1,4 +1,6 @@
 {
-  "dormant_admins": [],
-  "escalation_paths": []
+  "dormant_accounts": 1,
+  "overprivileged_roles": 3,
+  "unused_access_keys": 2,
+  "mfa_disabled": 0
 }

@@ -1,0 +1,84 @@
+{
+  "alert_id": "AL-0001",
+  "level": "session",
+  "identity_id": "svc-report",
+  "session_id": "okta:sess-svc-escalation",
+  "risk": 100.0,
+  "confidence": 0.3,
+  "blast_radius": 1,
+  "band": "revoke",
+  "patterns": [
+    "ML",
+    "P3",
+    "P4"
+  ],
+  "mitre": [
+    "T1098",
+    "T1526",
+    "T1548",
+    "T1562"
+  ],
+  "reasons": [
+    "Escalation chain: CreateAccessKey -> AttachUserPolicy -> AssumeRole -> GetSecretValue.",
+    "Session behavior is unusual compared with normal activity (anomaly score 1.00).",
+    "Unusual API call 'CreateAccessKey': sensitive action.",
+    "Unusual API call 'AttachUserPolicy': sensitive action.",
+    "Unusual API call 'GetSecretValue': sensitive action."
+  ],
+  "evidence_event_ids": [
+    "okta-1825",
+    "ct-3469",
+    "ct-3470",
+    "ct-3471",
+    "ct-3472"
+  ],
+  "chain": [
+    {
+      "event_id": "ct-3469",
+      "action": "CreateAccessKey",
+      "state": "CredCreate",
+      "timestamp": "2026-10-28T09:01:00Z"
+    },
+    {
+      "event_id": "ct-3470",
+      "action": "AttachUserPolicy",
+      "state": "PermGrant",
+      "timestamp": "2026-10-28T09:04:00Z"
+    },
+    {
+      "event_id": "ct-3471",
+      "action": "AssumeRole",
+      "state": "RoleAssume",
+      "timestamp": "2026-10-28T09:07:00Z"
+    },
+    {
+      "event_id": "ct-3472",
+      "action": "GetSecretValue",
+      "state": "Impact",
+      "timestamp": "2026-10-28T09:11:00Z"
+    }
+  ],
+  "prediction": {
+    "next_state": "Recon",
+    "probability": 0.12
+  },
+  "counterfactuals": [
+    {
+      "without": "ML",
+      "risk": 100.0
+    },
+    {
+      "without": "P3",
+      "risk": 96.0
+    },
+    {
+      "without": "P4",
+      "risk": 100.0
+    }
+  ],
+  "recommended_action": "revoke",
+  "action_status": "pending",
+  "feedback": null,
+  "first_seen": "2026-10-28T09:00:00Z",
+  "last_seen": "2026-10-28T09:11:00Z"
+}

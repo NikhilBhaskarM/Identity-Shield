@@ -11,6 +11,9 @@ router = APIRouter(tags=["metrics"])
 @router.get("/metrics", response_model=Metrics)
 def get_metrics(request: Request):
     res = getattr(request.app.state, "result", None)
+    if res is None:
+        from app.main import get_or_run_pipeline
+        res = get_or_run_pipeline(request.app)
     if res is None or res.metrics is None:
         return Metrics()
     return res.metrics
